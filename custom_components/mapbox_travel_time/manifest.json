@@ -1,0 +1,10 @@
+{
+  "domain": "mapbox_travel_time",
+  "name": "Mapbox Travel Time",
+  "version": "1.0.0",
+  "config_flow": true,
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "loggers": ["custom_components.mapbox_travel_time"]
+}
