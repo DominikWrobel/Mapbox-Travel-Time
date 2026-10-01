@@ -1,0 +1,57 @@
+{
+  "title": "Mapbox Travel Time",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dodaj trasę z uwzględnieniem ruchu",
+        "description": "Utwórz jedną trasę. Początek i cel mogą być encją posiadającą atrybuty latitude/longitude (np. zone.home, person.osoba lub device_tracker.samochod) albo stałymi współrzędnymi w formacie szerokość,długość.",
+        "data": {
+          "route_name": "Nazwa trasy",
+          "access_token": "Token dostępu Mapbox",
+          "origin": "Początek trasy",
+          "destination": "Cel trasy"
+        },
+        "data_description": {
+          "route_name": "Unikalna nazwa, np. Dom → Praca albo Samochód → Dom.",
+          "access_token": "Publiczny token Mapbox (zwykle zaczyna się od pk.).",
+          "origin": "ID encji albo szerokość,długość. Położenie dynamicznej encji jest pobierane przy każdym odświeżeniu.",
+          "destination": "ID encji albo szerokość,długość. Położenie dynamicznej encji jest pobierane przy każdym odświeżeniu."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Połącz ponownie z Mapbox",
+        "description": "Wprowadź prawidłowy token dostępu Mapbox.",
+        "data": {"access_token": "Token dostępu Mapbox"}
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć się z Mapbox lub pobrać trasy.",
+      "invalid_auth": "Token Mapbox jest nieprawidłowy albo nie ma wymaganych uprawnień.",
+      "invalid_location": "Początek lub cel jest nieprawidłowy albo encja nie udostępnia latitude/longitude."
+    },
+    "abort": {
+      "already_configured": "Trasa o tej nazwie jest już skonfigurowana.",
+      "reauth_successful": "Token Mapbox został pomyślnie zaktualizowany."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcje Mapbox Travel Time",
+        "description": "Ustaw częstotliwość aktualizacji i poziom logowania. 300 sekund = 5 minut.",
+        "data": {
+          "scan_interval": "Interwał aktualizacji",
+          "log_successful_updates": "Loguj każde udane odświeżenie na poziomie INFO"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "travel_time": {"name": "Czas przejazdu"},
+      "typical_time": {"name": "Typowy czas przejazdu"},
+      "traffic_delay": {"name": "Opóźnienie przez ruch"},
+      "distance": {"name": "Dystans"}
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Mapbox Travel Time",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add traffic-aware route",
+        "description": "Create one route. Origin and destination can be an entity_id with latitude/longitude attributes (for example zone.home, person.someone or device_tracker.car) or static coordinates in latitude,longitude format.",
+        "data": {
+          "route_name": "Route name",
+          "access_token": "Mapbox access token",
+          "origin": "Origin",
+          "destination": "Destination"
+        },
+        "data_description": {
+          "route_name": "A unique name, for example Home → Work or Car → Home.",
+          "access_token": "Public Mapbox access token (usually starts with pk.).",
+          "origin": "Entity ID or latitude,longitude. Dynamic entities are resolved on every update.",
+          "destination": "Entity ID or latitude,longitude. Dynamic entities are resolved on every update."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reconnect Mapbox",
+        "description": "Enter a valid Mapbox access token.",
+        "data": {"access_token": "Mapbox access token"}
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to Mapbox or retrieve the route.",
+      "invalid_auth": "The Mapbox access token is invalid or not authorized.",
+      "invalid_location": "Origin or destination is invalid or does not expose latitude/longitude."
+    },
+    "abort": {
+      "already_configured": "A route with this name is already configured.",
+      "reauth_successful": "Mapbox access token updated successfully."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Mapbox Travel Time options",
+        "description": "Configure polling and logging. 300 seconds equals 5 minutes.",
+        "data": {
+          "scan_interval": "Update interval",
+          "log_successful_updates": "Log every successful update at INFO level"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "travel_time": {"name": "Travel time"},
+      "typical_time": {"name": "Typical travel time"},
+      "traffic_delay": {"name": "Traffic delay"},
+      "distance": {"name": "Distance"}
+    }
+  }
+}
