@@ -1,8 +1,13 @@
 {
   "domain": "mapbox_travel_time",
   "name": "Mapbox Travel Time",
+  "codeowners": [
+    "@DominikWrobel"
+  ],
   "version": "1.0.0",
   "config_flow": true,
+  "documentation": "https://github.com/DominikWrobel/mapbox_travel_time",
+  "issue_tracker": "https://github.com/DominikWrobel/mapbox_travel_time/issues",
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "requirements": [],
