@@ -1,6 +1,7 @@
 # Mapbox Travel Time for Home Assistant
 
-<img width="1254" height="1254" alt="mapbox" src="https://github.com/user-attachments/assets/6ec7be4c-6849-4fc9-9001-80345e1fd7ee" />
+<img width="256" height="256" alt="icon" src="https://github.com/user-attachments/assets/5bc15283-4600-409f-a79d-ae20fde3f66a" />
+
 
 
 Custom Home Assistant integration that exposes traffic-aware car travel time using the Mapbox Directions API and the `mapbox/driving-traffic` profile.
